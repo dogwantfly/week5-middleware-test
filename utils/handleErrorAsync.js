@@ -6,7 +6,6 @@ const handleErrorAsync = function handleErrorAsync(func) {
         // async 本身就是 promise，所以可用 catch 去捕捉
         func(req, res, next).catch(
             function (error) {
-                console.log('error:', error);
                 return next(error);
             }
         );
